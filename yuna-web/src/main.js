@@ -1,5 +1,9 @@
 import { createApp } from 'vue'
-import './assets/main.css' // Hier dein professionelles CSS laden
 import App from './App.vue'
+import router from './router'
+import './assets/main.css' // Dein globales CSS
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app.use(router)
+app.mount('#app')
